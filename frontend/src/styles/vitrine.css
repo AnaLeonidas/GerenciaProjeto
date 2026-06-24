@@ -1,0 +1,81 @@
+/* ================================================
+   VITRINE — La Dolce Vita
+   Variáveis harmonizadas com o projeto unificado
+   ================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* Tokens específicos da vitrine (complementam globals.css) */
+:root {
+  --color-bg:          #F5F0DC;
+  --color-bg-card:     #FAF7EC;
+  --color-green-dark:  #3A6B35;
+  --color-green-main:  #6BA35A;
+  --color-green-btn:   #6BA35A;
+  --color-yellow-accent: #F5C842;
+  --color-yellow-border: #FDE97A;
+  --color-text-primary:   #1a1a1a;
+  --color-text-secondary: #555;
+  --color-text-muted:     #888;
+  --color-white:          #ffffff;
+  --color-card-border:    #e8e0c8;
+  --color-nav-bg:         #6BA35A;
+  --color-sidebar-bg:     #F5F0DC;
+
+  --nav-height:     64px;
+  --sidebar-width:  320px;
+
+  --shadow-card:       0 2px 12px rgba(0,0,0,0.08);
+  --shadow-card-hover: 0 8px 28px rgba(0,0,0,0.14);
+  --shadow-sidebar:    -4px 0 20px rgba(0,0,0,0.12);
+
+  --transition-fast: 0.18s ease;
+  --transition-med:  0.3s ease;
+}
+
+/* ── Animações ─────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Layout principal ──────────────────────── */
+.vitrine-main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vitrine-page-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--color-green-main);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.vitrine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-green-btn); border-radius: 3px; }
+
+/* ── Responsivo ────────────────────────────── */
+@media (max-width: 640px) {
+  .vitrine-main { padding: 1rem; }
+  .vitrine-page-title { font-size: 1.7rem; }
+  .vitrine-grid { gap: 1.25rem; }
+}

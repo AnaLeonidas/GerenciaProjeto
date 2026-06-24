@@ -1,0 +1,223 @@
+/* ── Página ──────────────────────────────────── */
+.pagina {
+  min-height: 100vh;
+  background: #fff8e7;
+  display: flex;
+  flex-direction: column;
+}
+
+.main { flex: 1; padding: 2.5rem 0; }
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Cabeçalho da página ─────────────────────── */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.8rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.titulo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2A1A0E;
+  margin: 0 0 0.2rem 0;
+}
+
+.subtitulo {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.buscaInput {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.88rem;
+  color: #333;
+  background: #fff;
+  outline: none;
+  min-width: 220px;
+  transition: border-color 0.15s;
+}
+.buscaInput:focus { border-color: #6BA35A; }
+
+/* ── Card de pedido ──────────────────────────── */
+.card {
+  background: #FDFAF3;
+  border: 1px solid #EDE4CE;
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 4px 20px rgba(42, 26, 14, 0.09);
+}
+
+/* Topo: número+badge esq | preço dir */
+.cardTopo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  gap: 1rem;
+}
+.cardTopoEsq {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.numeroPedido {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2A1A0E;
+  margin: 0;
+}
+
+.preco {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2A1A0E;
+  white-space: nowrap;
+}
+
+/* Data */
+.data {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0 0 1rem 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Itens */
+.labelItens {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #AAA;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.listaItens {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0 0 1.2rem 0;
+}
+.listaItens li {
+  font-size: 0.88rem;
+  color: #444;
+  margin-bottom: 0.18rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Botões */
+.acoes {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.btnSecundario {
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #C8B89A;
+  background: transparent;
+  color: #4A3728;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.btnSecundario:hover { background: #F5EDE4; border-color: #4A3728; }
+
+.btnPrimario {
+  padding: 0.45rem 1.1rem;
+  border-radius: 8px;
+  border: none;
+  background: #2A1A0E;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btnPrimario:hover { background: #4A3728; }
+
+/* ── Badges de status ────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.7rem;
+  border-radius: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.badgeIcon { font-size: 0.78rem; }
+
+/* ENTREGUE — verde claro */
+.badgeEntregue {
+  background: #E6F4EA;
+  color: #2E7D32;
+}
+
+/* EM TRANSPORTE — âmbar */
+.badgeTransporte {
+  background: #FFF3CD;
+  color: #92640A;
+}
+
+/* PEDIDO RECEBIDO — marrom escuro */
+.badgeRecebido {
+  background: #2A1A0E;
+  color: #fff;
+}
+
+/* EM PRODUÇÃO — verde oliva */
+.badgeProducao {
+  background: #F0F4E8;
+  color: #5A6B2A;
+}
+
+/* ── Vazio ───────────────────────────────────── */
+.vazio {
+  text-align: center;
+  color: #888;
+  padding: 3rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+}
+
+/* ── Responsivo ──────────────────────────────── */
+@media (max-width: 600px) {
+  .cabecalho   { flex-direction: column; align-items: stretch; }
+  .buscaInput  { min-width: unset; width: 100%; }
+  .titulo      { font-size: 1.5rem; }
+  .cardTopo    { flex-direction: column; align-items: flex-start; }
+  .preco       { font-size: 1.2rem; }
+  .acoes       { justify-content: flex-start; }
+}

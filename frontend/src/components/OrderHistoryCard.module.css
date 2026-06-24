@@ -1,0 +1,104 @@
+.card {
+  background: var(--white);
+  border: 1.5px solid var(--yellow);
+  border-radius: 28px;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+  animation: fadeUp 0.3s ease both;
+}
+
+.card:hover {
+  box-shadow: 0 6px 24px rgba(42, 26, 14, 0.1);
+  transform: translateY(-1px);
+}
+
+/* ── Colunas ──────────────────────────── */
+.colId      { flex: 1;   min-width: 72px; }
+.colCliente { flex: 3;   padding: 0 1rem; }
+.colTotal   { flex: 1;   text-align: right; padding-right: 1.5rem; }
+.colAcoes   { flex: 2;   display: flex; align-items: center; gap: 0.65rem; justify-content: flex-end; }
+
+/* ── Textos ───────────────────────────── */
+.idText    { font-weight: 700; font-size: 0.88rem; color: var(--brown-dark); margin: 0; }
+.dateText  { font-size: 0.76rem; color: var(--gray-light); margin: 0; margin-top: 2px; }
+
+.clienteName   { font-weight: 700; font-size: 1rem; color: var(--brown-dark); margin: 0 0 2px; }
+.itemsSummary  { font-size: 0.82rem; color: var(--gray-text); margin: 0; }
+
+.totalLabel { font-size: 0.68rem; font-weight: 700; color: var(--gray-light);
+              text-transform: uppercase; letter-spacing: 0.08em; margin: 0; }
+.totalValue { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;
+              color: var(--brown-dark); margin: 0; }
+
+/* ── Status (admin: select | user: badge) ─ */
+.statusSelect {
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--brown-dark);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.15s;
+}
+
+.statusBadge {
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Status cores */
+.statusProducao { background: rgba(107, 163, 90, 0.15); color: var(--green); }
+.statusPronto   { background: rgba(107, 163, 90, 0.42); color: var(--green); }
+.statusEntregue { background: var(--green); color: #fff; }
+
+/* ── Botões de ação ───────────────────── */
+.iconBtn {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gray-text);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+}
+.iconBtn:hover {
+  background: var(--cream-dark);
+  border-color: var(--brown-light);
+}
+
+/* ── Responsivo ───────────────────────── */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 18px;
+    padding: 1rem 1.25rem;
+  }
+  .colId, .colCliente, .colTotal, .colAcoes {
+    flex: none;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+  .colTotal  { padding-right: 0; }
+  .colAcoes  { justify-content: flex-start; margin-top: 4px; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
