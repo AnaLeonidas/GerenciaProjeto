@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![La Dolce Vita](frontend/src/assets/logo.png)
-
 **Uma plataforma completa de e-commerce para gerenciamento de produtos e pedidos**
 
 [Features](#features) • [Tech Stack](#tech-stack) • [Instalação](#instalação) • [Uso](#uso) • [API](#api) • [Estrutura](#estrutura-do-projeto)
